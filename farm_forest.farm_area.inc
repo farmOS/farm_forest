@@ -15,7 +15,6 @@ function farm_forest_farm_area_type_info() {
       'style' => 'darkgreen',
       'weight' => 90,
       'dashboard_metric' => TRUE,
-
     ),
     'plantation' => array(
       'label' => t('Plantation'),
