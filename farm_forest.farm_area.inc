@@ -14,11 +14,14 @@ function farm_forest_farm_area_type_info() {
       'label' => t('Natural Stand'),
       'style' => 'darkgreen',
       'weight' => 90,
+      'dashboard_metric' => TRUE,
+
     ),
     'plantation' => array(
       'label' => t('Plantation'),
       'style' => 'green',
       'weight' => 80,
+      'dashboard_metric' => TRUE,
     ),
   );
 }
