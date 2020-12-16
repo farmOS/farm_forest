@@ -27,9 +27,9 @@ class Forest extends FarmPlanType {
       'target_type' => 'asset',
       'multiple' => TRUE,
       'hidden' => FALSE,
+      'required' => TRUE,
     ];
     $fields['asset'] = $this->farmFieldFactory->bundleFieldDefinition($options);
-    $fields['asset']->setRequired(TRUE);
 
     return $fields;
   }
