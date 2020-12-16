@@ -18,7 +18,7 @@ class Forest extends FarmAssetType {
    * {@inheritdoc}
    */
   public function buildFieldDefinitions() {
-    $fields = [];
+    $fields = parent::buildFieldDefinitions();
 
     // Forest type field.
     $options = [
