@@ -14,4 +14,24 @@ use Drupal\farm_entity\Plugin\Plan\PlanType\FarmPlanType;
  */
 class Forest extends FarmPlanType {
 
+  /**
+   * {@inheritdoc}
+   */
+  public function buildFieldDefinitions() {
+    $fields = parent::buildFieldDefinitions();
+
+    // Assets in the plan.
+    $options = [
+      'type' => 'entity_reference',
+      'label' => $this->t('Assets'),
+      'target_type' => 'asset',
+      'multiple' => TRUE,
+      'hidden' => FALSE,
+    ];
+    $fields['asset'] = $this->farmFieldFactory->bundleFieldDefinition($options);
+    $fields['asset']->setRequired(TRUE);
+
+    return $fields;
+  }
+
 }
