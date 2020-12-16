@@ -23,12 +23,14 @@ class Forest extends FarmPlanType {
     // Assets in the plan.
     $options = [
       'type' => 'entity_reference',
-      'label' => $this->t('Assets'),
+      'label' => $this->t('Forests'),
+      'description' => $this->t('Select the forests that this plan pertains to.'),
       'target_type' => 'asset',
+      'target_bundle' => 'forest',
       'multiple' => TRUE,
       'required' => TRUE,
       'weight' => [
-        'form' => 50,
+        'form' => -50,
         'view' => -10,
       ],
     ];
