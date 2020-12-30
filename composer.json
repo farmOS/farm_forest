@@ -15,7 +15,7 @@
           "email": "mike@farmier.com"
       }
   ],
-  "provide": {
+  "replace": {
     "drupal/farm_entity": "*",
     "drupal/plan": "*"
   }
