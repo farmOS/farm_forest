@@ -14,9 +14,5 @@
           "name": "Michael Stenta",
           "email": "mike@farmier.com"
       }
-  ],
-  "replace": {
-    "drupal/farm_entity": "*",
-    "drupal/plan": "*"
-  }
+  ]
 }
