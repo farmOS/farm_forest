@@ -3,7 +3,7 @@ status: true
 dependencies:
   enforced:
     module:
-      - farm_forest
+      - farm_forest_plan
       - farm_migrate
 id: farm_migrate_plan_forest
 label: 'Plans (Forest)'

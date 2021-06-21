@@ -3,7 +3,7 @@ status: true
 dependencies:
   enforced:
     module:
-      - farm_forest
+      - farm_forest_plan
 id: forest
 label: 'Forest'
 description: ''

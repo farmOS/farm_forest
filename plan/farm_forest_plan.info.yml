@@ -1,7 +1,9 @@
-name: Forest asset
-description: Adds a Forest asset type.
+name: Forest plan
+description: Adds a Forest plan type.
 type: module
 package: farmOS Contrib
 core_version_requirement: ^9
 dependencies:
   - farm_entity
+  - farm_forest
+  - plan
