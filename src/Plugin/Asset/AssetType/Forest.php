@@ -28,6 +28,7 @@ class Forest extends FarmAssetType {
         'stand' => t('Natural stand'),
         'plantation' => t('Plantation'),
       ],
+      'multiple' => TRUE,
       'required' => TRUE,
       'weight' => [
         'form' => -50,
