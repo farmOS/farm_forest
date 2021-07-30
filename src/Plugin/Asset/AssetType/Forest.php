@@ -25,7 +25,7 @@ class Forest extends FarmAssetType {
       'type' => 'list_string',
       'label' => t('Forest type'),
       'allowed_values' => [
-        'stand' => t('Natural stand'),
+        'natural' => t('Natural stand'),
         'plantation' => t('Plantation'),
       ],
       'multiple' => TRUE,
