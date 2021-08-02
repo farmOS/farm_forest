@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - farm_forest
+id: asset_forest
+color: darkgreen
+conditions:
+  asset_type:
+    - forest
