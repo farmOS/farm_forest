@@ -24,10 +24,7 @@ class Forest extends FarmAssetType {
     $options = [
       'type' => 'list_string',
       'label' => t('Forest type'),
-      'allowed_values' => [
-        'natural' => t('Natural stand'),
-        'plantation' => t('Plantation'),
-      ],
+      'allowed_values' => static::allowedValues(),
       'multiple' => TRUE,
       'required' => TRUE,
       'weight' => [
@@ -36,8 +33,26 @@ class Forest extends FarmAssetType {
       ],
     ];
     $fields['forest_type'] = $this->farmFieldFactory->bundleFieldDefinition($options);
+    // @todo: Define this via an options provider once
+    // https://www.drupal.org/node/2329937 is completed.
+    $fields['forest_type']->addPropertyConstraints('value', [
+      'AllowedValues' => ['callback' => __CLASS__ . '::allowedValues'],
+    ]);
 
     return $fields;
+  }
+
+  /**
+   * Allowed values for the field.
+   *
+   * @return array
+   *  Array of allowed values.
+   */
+  public static function allowedValues() {
+    return [
+      'natural' => t('Natural stand'),
+      'plantation' => t('Plantation'),
+    ];
   }
 
 }
