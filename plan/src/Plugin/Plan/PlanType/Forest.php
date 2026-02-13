@@ -2,16 +2,17 @@
 
 namespace Drupal\farm_forest_plan\Plugin\Plan\PlanType;
 
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\farm_entity\Attribute\PlanType;
 use Drupal\farm_entity\Plugin\Plan\PlanType\FarmPlanType;
 
 /**
  * Provides the forest plan type.
- *
- * @PlanType(
- *   id = "forest",
- *   label = @Translation("Forest"),
- * )
  */
+#[PlanType(
+  id: 'forest',
+  label: new TranslatableMarkup('Forest'),
+)]
 class Forest extends FarmPlanType {
 
   /**

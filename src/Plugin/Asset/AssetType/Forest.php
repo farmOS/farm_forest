@@ -2,16 +2,17 @@
 
 namespace Drupal\farm_forest\Plugin\Asset\AssetType;
 
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\farm_entity\Attribute\AssetType;
 use Drupal\farm_entity\Plugin\Asset\AssetType\FarmAssetType;
 
 /**
  * Provides the forest asset type.
- *
- * @AssetType(
- *   id = "forest",
- *   label = @Translation("Forest"),
- * )
  */
+#[AssetType(
+  id: 'forest',
+  label: new TranslatableMarkup('Forest'),
+)]
 class Forest extends FarmAssetType {
 
   /**
